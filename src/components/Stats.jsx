@@ -29,7 +29,7 @@ export default function Stats() {
     <section className="features">
       <div className="container">
         <hr className="orange-line" />
-        <h2 className="features-heading">Nega aynan Akademnashr a?</h2>
+        <h2 className="features-heading">Nega aynan Akademnashr?</h2>
 
         <ul className="features-list">
           {featuresData.map((feature) => (
