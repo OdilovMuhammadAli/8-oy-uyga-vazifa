@@ -11,7 +11,6 @@
   gap: 24px;
 }
 
-/* LOGO */
 .logo-link {
   transition: opacity 0.4s ease;
   flex-shrink: 0;
@@ -31,13 +30,11 @@
   height: auto;
 }
 
-/* ACTIONS */
 .site-header-actions {
   display: flex;
   align-items: center;
 }
 
-/* NAV */
 .sitenav-list {
   display: flex;
   align-items: center;
