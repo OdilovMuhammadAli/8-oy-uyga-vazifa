@@ -15,16 +15,6 @@ const robotoCondensed = Roboto_Condensed({
   display: "swap",
 });
 
-export const metadata = {
-  title: "Akademnashr - Ozbek tilidagi kitoblar",
-  description:
-    "Dasturlash asoslariga oid ozbek tilidagi ilk eng mukammal qollanma",
-  keywords: "kitoblar, dasturlash, python, ozbek tilida",
-  icons: {
-    icon: "/favicon.svg",
-  },
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="uz">
