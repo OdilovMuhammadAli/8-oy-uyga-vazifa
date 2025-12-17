@@ -1,3 +1,78 @@
+:root {
+  --accent-color: #ff7500;
+
+  --text-font: var(--font-roboto), "Arial", sans-serif;
+  --heading-font: var(--font-roboto-condensed), "Roboto", "Arial", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--text-font);
+  color: #000;
+  letter-spacing: 0.5px;
+}
+
+*:focus {
+  outline: 2px var(--accent-color);
+  outline-offset: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-link {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: bold;
+  background-color: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.4s ease;
+}
+
+.main-link:hover {
+  opacity: 0.8;
+}
+
+.main-link:active {
+  opacity: 0.6;
+}
+
+.orange-line {
+  width: 80px;
+  height: 3px;
+  border: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  background-color: var(--accent-color);
+}
 .site-header {
   padding: 16px 0;
   border-top: 5px solid var(--accent-color);
