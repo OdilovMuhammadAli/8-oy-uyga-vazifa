@@ -1,29 +1,38 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Hero() {
   return (
-    <section className="bg-[#252420] text-white">
-      <div className="max-w-[1200px] mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <div className="w-12 h-1 bg-orange-500 mb-6"></div>
+    <section className="hero">
+      <div className="hero-container container">
+        <div className="hero-content">
+          <hr className="orange-line" />
+          <h2 className="hero-heading">Pythonda dasturlash asoslari</h2>
 
-          <h1 className="text-4xl font-bold mb-6">
-            Pythonda dasturlash <br /> asoslari
-          </h1>
-
-          <p className="text-gray-300 mb-8">
-            Dasturlash asoslariga oid o'zbek tilidagi ilk mukammal qo'llanma.
-            Kitobning har bir bo'limi uchun maxsus video darslar yozilgan.
+          <p className="hero-text">
+            Dasturlash asoslariga oid o'zbek tilidagi ilk eng mukammal
+            qo'llanma.
+            <br />
+            Kitobning har bir bo'limi uchun maxsus video darslar yozilgan
+            bo'lib,
+            <br />
+            ularga kitobda ko'rsatilgan QR kod orqali o'tish mumkin.
           </p>
 
-          <button className="bg-orange-500 px-6 py-3 rounded">
+          <Link href="#buyurtma" className="main-link">
             Buyurtma berish
-          </button>
+          </Link>
         </div>
 
-        <div className="flex justify-center">
-          <div className="w-[300px] h-[420px] bg-gray-600 flex items-center justify-center">
-            Kitob rasmi
-          </div>
-        </div>
+        <Image
+          src="/images/python-book.svg"
+          alt="Qo'lda ushlab turilgan Pythonda dasturlash asoslari kitobi"
+          width={510}
+          height={510}
+          className="hero-img"
+          quality={100}
+          priority
+        />
       </div>
     </section>
   );

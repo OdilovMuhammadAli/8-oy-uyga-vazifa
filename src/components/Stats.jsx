@@ -1,36 +1,49 @@
+import Image from "next/image";
+
 export default function Stats() {
+  const featuresData = [
+    {
+      id: 1,
+      icon: "/images/cursor.svg",
+      title: "Oson buyurtma qilish",
+      description:
+        "Akademnashr.uz saytidan ozingizga yoqqan kitobni sodda usulda buyurtma qila olasiz.",
+    },
+    {
+      id: 2,
+      icon: "/images/star.svg",
+      title: "Eng sara kitoblar",
+      description:
+        "Trenddagi eng ommabop, turli auditoriyalarga moljallangan har xil janrdagi kitoblarni topa olasiz.",
+    },
+    {
+      id: 3,
+      icon: "/images/light.svg",
+      title: "Tez yetkazib berish",
+      description:
+        "Ozbekistonning ixtiyoriy hududiga 3 ish kuni ichida, xalqaro buyurtmalarni 10 ish kuni ichida yetkazib beriladi.",
+    },
+  ];
+
   return (
-    <section className="py-24">
-      <div className="max-w-[1200px] mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-16">
-          Nega aynan <br /> Akademnashr?
-        </h2>
+    <section className="features">
+      <div className="container">
+        <hr className="orange-line" />
+        <h2 className="features-heading">Nega aynan Akademnashr?</h2>
 
-        <div className="grid md:grid-cols-3 gap-10">
-          <div>
-            <div className="w-16 h-16 bg-orange-100 rounded-full mx-auto mb-4"></div>
-            <h3 className="font-bold mb-2">Oson buyurtma qilish</h3>
-            <p className="text-sm text-gray-600">
-              Sayt orqali tez va oson buyurtma berish mumkin.
-            </p>
-          </div>
+        <ul className="features-list">
+          {featuresData.map((feature) => (
+            <li key={feature.id} className="feature">
+              <div className="feature-icon-wrapper">
+                <Image src={feature.icon} alt="" width={56} height={56} />
+              </div>
 
-          <div>
-            <div className="w-16 h-16 bg-orange-100 rounded-full mx-auto mb-4"></div>
-            <h3 className="font-bold mb-2">Eng sara kitoblar</h3>
-            <p className="text-sm text-gray-600">
-              Eng ommabop va foydali kitoblar jamlangan.
-            </p>
-          </div>
+              <h3 className="feature-title">{feature.title}</h3>
 
-          <div>
-            <div className="w-16 h-16 bg-orange-100 rounded-full mx-auto mb-4"></div>
-            <h3 className="font-bold mb-2">Tez yetkazib berish</h3>
-            <p className="text-sm text-gray-600">
-              O‘zbekiston bo‘ylab tez yetkazib beriladi.
-            </p>
-          </div>
-        </div>
+              <p className="feature-info">{feature.description}</p>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

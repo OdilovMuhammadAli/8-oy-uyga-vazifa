@@ -1,27 +1,40 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Promo() {
   return (
-    <section className="py-24">
-      <div className="max-w-[1200px] mx-auto px-4">
-        <div className="bg-[#252420] text-white rounded-lg p-12 grid md:grid-cols-2 items-center gap-10">
-          <div>
-            <h3 className="text-2xl font-bold mb-4">
-              Bolalar kitoblari uchun <br /> ajoyib aksiya!
-            </h3>
-
-            <p className="text-gray-300 mb-6">
-              Ertaklar, she’rlar va qiziqarli kitoblar katta chegirmada.
-            </p>
-
-            <button className="bg-orange-500 px-6 py-3 rounded">
-              Buyurtma berish
-            </button>
-          </div>
-
-          <div className="flex justify-center">
-            <div className="w-[260px] h-[200px] bg-gray-600 flex items-center justify-center">
-              Kitoblar
+    <section className="promo">
+      <div className="container">
+        <div className="promo-inner">
+          <div className="promo-content">
+            <h2 className="promo-heading">
+              Bolalar kitoblari uchun ajoyib aksiya!
+            </h2>
+            <div className="promo-info-wrapper">
+              <p className="promo-text">
+                Ertaklar, she'rlar, sarguzasht asarlar, fikrlashni o'stirish
+                uchun turli mashq qo'llanmalari va komikslar.
+              </p>
+              <p className="promo-text">
+                Aksiyadagi eng katta to'plamda
+                <strong className="promo-highlight"> 50 ta kitob </strong>
+                ni
+                <strong className="promo-highlight"> 350 ming </strong>
+                so'mga (aslida 383 ming so'm) sotib olishingiz mumkin.
+              </p>
             </div>
+            <Link href="#buyurtma" className="main-link">
+              Buyurtma berish
+            </Link>
           </div>
+          <Image
+            src="/images/sale-img.svg"
+            alt="Kitoblar to'plami ustma-ust joylangan"
+            width={440}
+            height={440}
+            className="promo-img"
+            quality={90}
+          />
         </div>
       </div>
     </section>
